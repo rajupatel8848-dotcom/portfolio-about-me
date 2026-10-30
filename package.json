@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "dev": "MAIL_DRY_RUN=1 node server.js",
+    "dev": "node -e \"process.env.MAIL_DRY_RUN='1'; require('./server.js')\"",
     "set-domain": "node scripts/set-domain.js"
   },
   "engines": { "node": ">=18" }
